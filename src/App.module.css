@@ -1,0 +1,19 @@
+.App {
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.App header {
+  font-size: 50px;
+  font-family: "Freehand", cursive;
+  width: 100%;
+  text-align: center;
+}
+
+.content {
+  height: fit-content;
+}

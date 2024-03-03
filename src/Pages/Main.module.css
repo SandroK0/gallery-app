@@ -1,0 +1,13 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.main input {
+  font-size: 20px;
+  width: 500px;
+}
+
