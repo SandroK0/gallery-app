@@ -10,7 +10,6 @@ export default function ImageModal(  props: {
   const {img , handleCloseModal} = props
 
 
-  // გადმოწერებს და ნახვებს აღარ აგზავნის API
 
   return (
     <div className={styles.modalBackdrop} onClick={handleCloseModal}>
