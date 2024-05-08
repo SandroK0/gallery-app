@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import useImageData from "../Hooks/useImageData";
 import { useInfiniteQuery } from "@tanstack/react-query";
-import { UnsplashPhoto, UnsplashPhotoInList } from "../Types";
+import { UnsplashPhoto} from "../Types";
 import ImageModal from "../Components/ImageModal";
 import styles from "./Gallery.module.css";
 import useInfiniteScroll from "../Hooks/useInfiniteScroll";
@@ -10,7 +10,7 @@ import Image from "./Image";
 export default function Gallery(props: { query: string }) {
   const { query } = props;
   const { FetchData } = useImageData();
-  const [modal, setModal] = useState<UnsplashPhotoInList | null>(null);
+  const [modal, setModal] = useState<UnsplashPhoto | null>(null);
 
   const {
     fetchNextPage,
@@ -34,7 +34,7 @@ export default function Gallery(props: { query: string }) {
     return <div>{error.message}</div>;
   }
 
-  const handleClick = (image: UnsplashPhotoInList) => {
+  const handleClick = (image: UnsplashPhoto) => {
     setModal(image);
   };
 
@@ -51,7 +51,7 @@ export default function Gallery(props: { query: string }) {
       {images &&
         images.pages.map((page, index) => (
           <div key={index} className={styles.gallery}>
-            {page.map((image: UnsplashPhotoInList, idx: number) => (
+            {page.map((image: UnsplashPhoto, idx: number) => (
               <Image image={image} handleClick={handleClick} key={idx} />
             ))}
           </div>

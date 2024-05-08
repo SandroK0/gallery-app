@@ -37,17 +37,18 @@ export default function useImageData() {
     return data;
   };
 
-  const getPhoto = async (id: string) => {
-    const response = await axios.get(`${URL}/photos/${id}`, {
+  const getPhotoStats = async (id: string) => {
+    const response = await axios.get(`${URL}/photos/${id}/statistics`, {
       params: {
         client_id: accessKey,
       },
     });
+    console.log(response.data)
     return response.data;
   };
 
   return {
     FetchData,
-    getPhoto,
+    getPhotoStats,
   };
 }

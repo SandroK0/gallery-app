@@ -1,13 +1,13 @@
 import React from "react";
-import { UnsplashPhoto, UnsplashPhotoInList } from "../Types";
+import { UnsplashPhoto } from "../Types";
 import styles from "./Image.module.css";
 
 export default function Image({
   image,
   handleClick,
 }: {
-  image: UnsplashPhotoInList;
-  handleClick: (image: UnsplashPhotoInList) => void;
+  image: UnsplashPhoto;
+  handleClick: (image: UnsplashPhoto) => void;
 }) {
   return (
     <div style={{ overflow: "hidden" }}>
