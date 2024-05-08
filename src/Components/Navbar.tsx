@@ -17,13 +17,13 @@ export default function Navbar() {
         to={"/"}
         style={currentPath === "/" ? { ...active } : { ...nonActive }}
       >
-        მთავარი
+        Main
       </NavLink>
       <NavLink
         to={"/history"}
         style={currentPath === "/history" ? { ...active } : { ...nonActive }}
       >
-        ისტორია
+        History
       </NavLink>
     </div>
   );
@@ -31,12 +31,11 @@ export default function Navbar() {
 
 const active = {
   textDecoration: "underline",
-  fontWeight: "1000",
   color: "black",
 };
 
 const nonActive = {
   cursor: "pointer",
   textDecoration: "none",
-  color: "black",
+  color: "#ccc",
 };

@@ -40,7 +40,7 @@ export default function History() {
             )
         )}
       </div>
-      {queryKeys && queryKeys.length <= 1 && <h1>ჯერ არაფერი მოგიძებნიათ!</h1>}
+      {queryKeys && queryKeys.length <= 1 && <h1>History is clear!</h1>}
       {query && <Gallery query={query}></Gallery>}
       <ScrollToTopButton></ScrollToTopButton>
     </div>

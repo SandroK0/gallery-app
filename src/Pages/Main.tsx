@@ -28,7 +28,7 @@ export default function Main() {
         onChange={(e) => {
           HandleChange(e.target.value);
         }}
-        placeholder="ძებნა"
+        placeholder="Enter a keyword..."
       ></input>
       <Gallery query={query}></Gallery>
       <ScrollToTopButton></ScrollToTopButton>

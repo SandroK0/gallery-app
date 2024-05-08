@@ -1,13 +1,13 @@
 import React from "react";
-import { UnsplashPhoto } from "../Types";
+import { UnsplashPhoto, UnsplashPhotoInList } from "../Types";
 import styles from "./Image.module.css";
 
 export default function Image({
   image,
   handleClick,
 }: {
-  image: UnsplashPhoto;
-  handleClick: (image: UnsplashPhoto) => void;
+  image: UnsplashPhotoInList;
+  handleClick: (image: UnsplashPhotoInList) => void;
 }) {
   return (
     <div style={{ overflow: "hidden" }}>
@@ -15,7 +15,7 @@ export default function Image({
         src={image.urls.small}
         width={300}
         height={300}
-        alt={image.alt_description}
+        alt={image.description}
         className={styles.img}
         onClick={() => handleClick(image)}
       />

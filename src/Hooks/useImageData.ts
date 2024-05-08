@@ -1,3 +1,4 @@
+import { dataTagSymbol } from "@tanstack/react-query";
 import axios, { AxiosRequestConfig } from "axios";
 
 const accessKey = "Y4gTL_LNccpQkmeNI_BeRLKqg7w1q6ZfgDXOxLpqnbA";
@@ -6,7 +7,7 @@ const URL = "https://api.unsplash.com";
 const requestConfig: AxiosRequestConfig = {
   params: {
     client_id: accessKey,
-    per_page: 20,
+    per_page: 30,
     order_by: "popular",
   },
 };
@@ -36,7 +37,17 @@ export default function useImageData() {
     return data;
   };
 
+  const getPhoto = async (id: string) => {
+    const response = await axios.get(`${URL}/photos/${id}`, {
+      params: {
+        client_id: accessKey,
+      },
+    });
+    return response.data;
+  };
+
   return {
     FetchData,
+    getPhoto,
   };
 }
