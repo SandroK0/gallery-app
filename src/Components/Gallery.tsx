@@ -1,15 +1,15 @@
 import React, { useState } from "react";
-import useImageData from "../Hooks/useImageData";
 import { useInfiniteQuery } from "@tanstack/react-query";
 import { UnsplashPhoto} from "../Types";
 import ImageModal from "../Components/ImageModal";
 import styles from "./Gallery.module.css";
 import useInfiniteScroll from "../Hooks/useInfiniteScroll";
 import Image from "./Image";
+import useApi from "../Hooks/useApi";
 
 export default function Gallery(props: { query: string }) {
   const { query } = props;
-  const { FetchData } = useImageData();
+  const { FetchPages } = useApi();
   const [modal, setModal] = useState<UnsplashPhoto | null>(null);
 
   const {
@@ -21,7 +21,7 @@ export default function Gallery(props: { query: string }) {
     data: images,
   } = useInfiniteQuery({
     queryKey: [query],
-    queryFn: FetchData,
+    queryFn: FetchPages,
     initialPageParam: 1,
     getNextPageParam: (lastPage, allPages, lastPageParam) => {
       return lastPageParam + 1;

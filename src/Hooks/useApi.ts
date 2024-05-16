@@ -1,4 +1,3 @@
-import { dataTagSymbol } from "@tanstack/react-query";
 import axios, { AxiosRequestConfig } from "axios";
 
 const accessKey = "Y4gTL_LNccpQkmeNI_BeRLKqg7w1q6ZfgDXOxLpqnbA";
@@ -8,12 +7,11 @@ const requestConfig: AxiosRequestConfig = {
   params: {
     client_id: accessKey,
     per_page: 30,
-    order_by: "popular",
   },
 };
 
-export default function useImageData() {
-  const FetchData = async ({
+export default function useApi() {
+  const FetchPages = async ({
     queryKey,
     pageParam,
   }: {
@@ -43,12 +41,12 @@ export default function useImageData() {
         client_id: accessKey,
       },
     });
-    console.log(response.data)
     return response.data;
   };
 
   return {
-    FetchData,
+    FetchPages,
     getPhotoStats,
+    accessKey,
   };
 }
