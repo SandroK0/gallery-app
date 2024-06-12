@@ -13,8 +13,6 @@ export default function Image({
     <div style={{ overflow: "hidden" }}>
       <img
         src={image.urls.small}
-        width={300}
-        height={300}
         alt={image.description}
         className={styles.img}
         onClick={() => handleClick(image)}

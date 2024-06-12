@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { useInfiniteQuery } from "@tanstack/react-query";
-import { UnsplashPhoto} from "../Types";
+import { UnsplashPhoto } from "../Types";
 import ImageModal from "../Components/ImageModal";
-import styles from "./Gallery.module.css";
 import useInfiniteScroll from "../Hooks/useInfiniteScroll";
 import Image from "./Image";
 import useApi from "../Hooks/useApi";
+import MasonryLayout from "./MasonryLayout";
 
 export default function Gallery(props: { query: string }) {
   const { query } = props;
@@ -42,20 +42,23 @@ export default function Gallery(props: { query: string }) {
     setModal(null);
   };
 
+  console.log(images);
+
   return (
     <>
       {status === "pending" && <div>Loading...</div>}
       {modal && (
         <ImageModal img={{ ...modal }} handleCloseModal={handleCloseModal} />
       )}
-      {images &&
-        images.pages.map((page, index) => (
-          <div key={index} className={styles.gallery}>
-            {page.map((image: UnsplashPhoto, idx: number) => (
-              <Image image={image} handleClick={handleClick} key={idx} />
-            ))}
-          </div>
-        ))}
+      {images && (
+        <MasonryLayout>
+          {images.pages.flatMap((page) =>
+            page.map((image: UnsplashPhoto, idx: number) => (
+              <Image image={image} handleClick={handleClick}/>
+            ))
+          )}
+        </MasonryLayout>
+      )}
       {isFetchingNextPage && <div>Loading More...</div>}
     </>
   );

@@ -72,10 +72,21 @@
 .statHead {
   color: #767676;
   font-weight: 300;
+  text-align: center;
+  width: 100%;
 }
 
 .stat {
   font-weight: 300;
+  text-align: center;
+}
+
+.table {
+  table-layout: fixed; /* Ensures equal column widths */
+}
+.table th,
+td {
+  width: 25%; 
 }
 
 .closeButton {

@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import styles from "./ImageModal.module.css";
 import { UnsplashPhoto, PhotoStatistics } from "../Types";
 import useApi from "../Hooks/useApi";
-import { CiHeart } from "react-icons/ci";
 
 export default function ImageModal(props: {
   img: UnsplashPhoto;
@@ -20,8 +19,7 @@ export default function ImageModal(props: {
   useEffect(() => {
     getData();
   }, []);
-  console.log(img.id);
-  console.log(img.links.download_location);
+
   return (
     <div className={styles.modalBackdrop}>
       <button className={styles.closeButton} onClick={handleCloseModal}>
@@ -41,7 +39,7 @@ export default function ImageModal(props: {
           alt={img.description}
           style={{ height: 700 }}
         />
-        <table>
+        <table className={styles.table}>
           <tr>
             <th>
               <span className={styles.statHead}>Likes</span>

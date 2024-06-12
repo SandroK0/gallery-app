@@ -14,9 +14,11 @@
     "@types/react-dom": "^18.2.19",
     "axios": "^1.6.1",
     "css-modules-typescript-loader": "^4.0.1",
+    "masonry-layout": "^4.2.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.2.1",
+    "react-masonry-css": "^1.0.16",
     "react-scripts": "5.0.1",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
