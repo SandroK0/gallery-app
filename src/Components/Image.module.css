@@ -1,8 +1,20 @@
 .img {
-  transition: transform 0.2s;
-  cursor: pointer;
+    transition: transform 0.2s;
+    cursor: pointer;
 }
 
 .img:hover {
-  transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+@media only screen and (max-width: 1100px) {
+    img {
+        width: 250px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    img {
+        width: 150px;
+    }
 }

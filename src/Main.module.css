@@ -1,76 +1,48 @@
 .main {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 10px;
-  min-height: 100vh;
-  padding: 0px 50px;
-  background-color: #fff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    min-height: 100vh;
+    padding: 0px 50px;
+    background-color: #fff;
 }
 
-
-
 header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  gap: 50px;
-  box-sizing: border-box;
-  border-bottom: 1px solid #ccc;
-  z-index: 1;
-  padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 50px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ccc;
+    z-index: 1;
+    padding: 10px;
 }
 
 header ul {
-  display: flex;
-  gap: 15px;
-  list-style: none;
+    display: flex;
+    gap: 15px;
+    list-style: none;
 }
 
 .vertLine {
-  background-color: #d1d1d1;
-  height: 32px;
-  width: 1px;
+    background-color: #d1d1d1;
+    height: 32px;
+    width: 1px;
 }
 
-.inputContainer {
-  width: 800px;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-
-  background-color: #eee;
-
-  border: 1px solid #ccc;
-  border-radius: 20px;
-  padding: 0 10px;
-  cursor: pointer;
+.logo {
+    width: 32px;
+    cursor: pointer;
 }
 
-.inputContainer:hover {
-  background-color: #d6d6d6;
-}
+@media only screen and (max-width: 500px) {
+    header {
+        gap: 20px;
+    }
 
-.inputContainer input {
-  font-size: 15px;
-  width: 100%;
-  padding: 10px 0;
-  border: none;
-  outline: none;
-  background-color: transparent;
-}
-
-.logo img{
-  width: 32px;
-}
-
-
-@media only screen and (max-width: 400px) {
-
-  .logo {
-    font-size: 20px;
-  }
-
-
+    .logo {
+        font-size: 20px;
+    }
 }

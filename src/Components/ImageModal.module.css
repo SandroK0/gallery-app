@@ -1,107 +1,167 @@
 .modalBackdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-  backdrop-filter: blur(5px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
 }
 
 .modalContent {
-  position: relative;
+    position: relative;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 
-  border-radius: 10px;
-  background-color: #fff;
-  padding: 20px;
-  z-index: 1001;
+    width: 500px;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 20px;
+    z-index: 1001;
 }
 
 .image {
-  width: 100%;
-  height: auto;
-  display: block;
+    width: 100%;
+    display: block;
 }
 
 .downloadButton {
-  display: inline-block;
-  padding: 8px 16px;
-  font-size: 14px;
-  text-align: center;
-  text-decoration: none;
-  background-color: #f1f1f1;
-  color: #424242;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease;
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #f1f1f1;
+    color: #424242;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
 }
 
 .downloadButton:hover {
-  color: #000;
-  border-color: #999;
-  cursor: pointer;
+    color: #000;
+    border-color: #999;
+    cursor: pointer;
 }
 
 .top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .userInfo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .userInfo img {
-  width: 50px;
-  border-radius: 25px;
+    width: 50px;
+    border-radius: 25px;
 }
 
 .statHead {
-  color: #767676;
-  font-weight: 300;
-  text-align: center;
-  width: 100%;
+    color: #767676;
+    font-weight: 300;
+    text-align: center;
+    width: 100%;
 }
 
 .stat {
-  font-weight: 300;
-  text-align: center;
+    font-weight: 300;
+    text-align: center;
 }
 
 .table {
-  table-layout: fixed; /* Ensures equal column widths */
+    table-layout: fixed; /* Ensures equal column widths */
+    width: 100%;
 }
 .table th,
 td {
-  width: 25%; 
+    width: 25%;
 }
 
 .closeButton {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  background-color: transparent;
-  border: none;
-  color: #000000;
-  font-size: 40px;
-  cursor: pointer;
-  padding: 5px;
-  z-index: 1001;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    color: #000000;
+    font-size: 40px;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1001;
+    color: white;
 }
 
 .closeButton:hover {
-  color: #ccc;
+    color: #ccc;
+}
+
+@media only screen and (max-width: 1100px) {
+    .modalContent {
+        width: 500px;
+    }
+
+    .userInfo img {
+        width: 25px;
+        border-radius: 12.5px;
+    }
+
+    .userInfo div {
+        font-size: 10px;
+    }
+
+    .downloadButton {
+        font-size: 10px;
+        padding: 4px 8px;
+    }
+
+    .statHead {
+        font-size: 10px;
+    }
+
+    .stat {
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .modalContent {
+        width: 270px;
+    }
+
+    .userInfo img {
+        width: 25px;
+        border-radius: 12.5px;
+    }
+
+    .userInfo div {
+        font-size: 10px;
+    }
+
+    .downloadButton {
+        font-size: 10px;
+        padding: 4px 8px;
+    }
+
+    .statHead {
+        font-size: 10px;
+    }
+
+    .stat {
+        font-size: 10px;
+    }
 }

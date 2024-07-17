@@ -57,7 +57,6 @@ export default function ImageModal(props: {
           src={img.urls.regular}
           className={styles.image}
           alt={img.description}
-          style={{ height: 700 }}
         />
         <table className={styles.table}>
           <thead>

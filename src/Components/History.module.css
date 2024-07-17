@@ -4,9 +4,9 @@
     overflow-x: auto;
     white-space: nowrap;
     gap: 10px;
-  }
-  
-  .key {
+}
+
+.key {
     display: inline-block;
     padding: 8px 16px;
     font-size: 14px;
@@ -18,18 +18,18 @@
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
-  }
-  
-  .key:hover {
+}
+
+.key:hover {
     color: #000;
     border-color: #999;
     cursor: pointer;
-  }
-  
-  .dropdown {
+}
+
+.dropdown {
     display: flex;
     flex-direction: column;
-    gap:10px;
+    gap: 10px;
     border-radius: 10px;
 
     position: absolute;
@@ -44,7 +44,16 @@
     overflow: hidden; /* Ensure the content doesn't overflow */
     transition: max-height 0.3s ease; /* Transition the max-height property */
     box-sizing: border-box;
-  }
-  
+}
 
-  
+@media only screen and (max-width: 1100px) {
+    .dropdown {
+        width: 400px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .dropdown {
+        width: 220px;
+    }
+}

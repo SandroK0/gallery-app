@@ -3,8 +3,7 @@ import styles from "./Main.module.css";
 import Gallery from "./Components/Gallery";
 import ScrollToTopButton from "./Components/ScrollToTopButton";
 import Searchbar from "./Components/Searchbar";
-import logo  from "./assets/logo.png"
-
+import logo from "./assets/logo.png";
 
 export default function Main() {
   const [query, setQuery] = useState<string>("");
@@ -13,7 +12,7 @@ export default function Main() {
     <div className={styles.main}>
       <header>
         <div className={styles.logo} onClick={() => setQuery("")}>
-          <img src={logo}></img>
+          <img src={logo} alt="logo" className={styles.logo}></img>
         </div>
         <Searchbar query={query} setQuery={setQuery}></Searchbar>
       </header>
