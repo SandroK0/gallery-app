@@ -5,7 +5,7 @@ import Main from "./Main";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 const root = ReactDOM.createRoot(
-  document.getElementById("root") as HTMLElement
+  document.getElementById("root") as HTMLElement,
 );
 
 export const queryClient = new QueryClient();
@@ -13,5 +13,5 @@ export const queryClient = new QueryClient();
 root.render(
   <QueryClientProvider client={queryClient}>
     <Main></Main>
-  </QueryClientProvider>
+  </QueryClientProvider>,
 );
