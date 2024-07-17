@@ -1,4 +1,5 @@
 import axios, { AxiosRequestConfig } from "axios";
+import { UnsplashPhoto } from "../Types";
 
 const accessKey = "Y4gTL_LNccpQkmeNI_BeRLKqg7w1q6ZfgDXOxLpqnbA";
 const URL = "https://api.unsplash.com";
@@ -44,9 +45,22 @@ export default function useApi() {
     return response.data;
   };
 
+  const trackPhotoDownload = async (id: string) => {
+    const response = await axios.get(`${URL}/photos/${id}/download`, {
+      params: {
+        client_id: accessKey,
+      },
+    });
+    if (response.status === 200) {
+      return response.data;
+    }
+    return false;
+  };
+
   return {
     FetchPages,
     getPhotoStats,
+    trackPhotoDownload,
     accessKey,
   };
 }

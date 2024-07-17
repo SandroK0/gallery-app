@@ -42,8 +42,6 @@ export default function Gallery(props: { query: string }) {
     setModal(null);
   };
 
-  console.log(images);
-
   return (
     <>
       {status === "pending" && <div>Loading...</div>}
@@ -53,9 +51,9 @@ export default function Gallery(props: { query: string }) {
       {images && (
         <MasonryLayout>
           {images.pages.flatMap((page) =>
-            page.map((image: UnsplashPhoto, idx: number) => (
-              <Image image={image} handleClick={handleClick}/>
-            ))
+            page.map((image: UnsplashPhoto) => (
+              <Image image={image} handleClick={handleClick} key={image.id}/>
+            )),
           )}
         </MasonryLayout>
       )}

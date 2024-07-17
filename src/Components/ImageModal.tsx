@@ -2,13 +2,14 @@ import React, { useEffect, useState } from "react";
 import styles from "./ImageModal.module.css";
 import { UnsplashPhoto, PhotoStatistics } from "../Types";
 import useApi from "../Hooks/useApi";
+import axios from "axios";
 
 export default function ImageModal(props: {
   img: UnsplashPhoto;
   handleCloseModal: () => void;
 }) {
   const { handleCloseModal, img } = props;
-  const { getPhotoStats, accessKey } = useApi();
+  const { getPhotoStats, trackPhotoDownload } = useApi();
   const [imgStats, setImgStats] = useState<PhotoStatistics>();
 
   const getData = async () => {
@@ -21,17 +22,10 @@ export default function ImageModal(props: {
   }, []);
 
   const handleDownload = async () => {
-    try {
-      // Trigger the download tracking endpoint
-      await fetch(img.links.download_location, {
-        method: "GET",
-        headers: {
-          Authorization: `Client-ID ${accessKey}`,
-        },
-      });
-
+    const data = await trackPhotoDownload(img.id);
+    if (data) {
       // Fetch the image as a Blob
-      const response = await fetch(img.urls.full);
+      const response = await fetch(data.url);
       const blob = await response.blob();
 
       // Create a link element and download the Blob
@@ -41,8 +35,6 @@ export default function ImageModal(props: {
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
-    } catch (error) {
-      console.error("Error downloading the image:", error);
     }
   };
 

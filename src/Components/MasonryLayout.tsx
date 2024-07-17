@@ -1,6 +1,6 @@
 import React from 'react';
 import Masonry from 'react-masonry-css';
-import './MasonryLayout.css'; // Create this file for custom styling if needed
+import './MasonryLayout.css';
 
 const breakpointColumnsObj = {
   default: 3,
