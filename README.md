@@ -1,20 +1,22 @@
 Gallery App
 
- <!-- Optional: Add a logo if you have one -->
 Overview
 
-Gallery App is a modern and responsive image gallery application built with React and TypeScript. This app leverages TanStack for efficient caching and Mansory for a dynamic and visually appealing image layout.
+Gallery App is a modern and responsive image gallery application built with React and TypeScript. This app leverages TanStack for efficient caching, Mansory for a dynamic and visually appealing image layout, and the Unsplash API for high-quality images.
 Features
 
     Responsive Design: Adapts seamlessly to different screen sizes.
     Efficient Caching: Uses TanStack for optimized data fetching and caching.
     Dynamic Layout: Implements Mansory for a fluid and dynamic image layout.
+    High-Quality Images: Integrates with the Unsplash API to fetch stunning photos.
     Fast Performance: Ensures quick load times and smooth interactions.
     Easy to Use: Simple and intuitive user interface.
 
 Screenshots
-<!-- Append your screenshots here -->
 
+![Screenshot 1](./screenshot1.png)
+![Screenshot 2](./screenshot2.png)
+![Screenshot 3](./screenshot3.png)
 
 
 Installation
@@ -56,31 +58,13 @@ gallery-app/
 │   ├── index.html
 │   └── ...
 ├── src/
-│   ├── components/
-│   ├── hooks/
-│   ├── pages/
-│   ├── styles/
-│   ├── App.tsx
+│   ├── assets/
+│   ├── Components/
+│   ├── Hooks/
+│   ├── Types.ts
+│   ├── Main.tsx
 │   ├── index.tsx
 │   └── ...
 ├── package.json
 ├── tsconfig.json
 └── ...
-
-Contributing
-
-Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
-
-    Fork the repository
-    Create a new branch
-    Make your changes
-    Submit a pull request
-
-License
-
-This project is licensed under the MIT License. See the LICENSE file for more details.
-Contact
-
-For any inquiries or issues, please contact your-email@example.com.
-
-Feel free to customize the sections as needed. Let me know if there are any additional details you would like to include!
