@@ -4,6 +4,7 @@
     overflow-x: auto;
     white-space: nowrap;
     gap: 10px;
+    padding: 10px 0px;
 }
 
 .key {

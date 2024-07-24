@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "./ScrollToTopButton.module.css";
-import { FaArrowUp } from "react-icons/fa";
+import { GoArrowUp } from "react-icons/go";
 
 const ScrollToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -32,7 +32,7 @@ const ScrollToTopButton = () => {
     <div className={styles.scrollToTop}>
       {isVisible && (
         <button onClick={scrollToTop}>
-          <FaArrowUp />
+          <GoArrowUp />
         </button>
       )}
     </div>
