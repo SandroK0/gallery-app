@@ -25,16 +25,18 @@ Follow these steps to set up and run the Gallery App on your local machine.
 
     Clone the repository:
 
-    bash
+bash
 
-git clone https://github.com/your-username/gallery-app.git
-cd gallery-app
+    git clone https://github.com/your-username/gallery-app.git
+
 
 Install dependencies:
 
 bash
 
-npm install
+    cd gallery-app
+    
+    npm install
 
 Start the development server:
 
