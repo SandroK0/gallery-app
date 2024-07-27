@@ -1,25 +1,25 @@
-Gallery App
+##Gallery App
 
-Overview
+#Overview
 
 Gallery App is a responsive image gallery application built with React and TypeScript. This app leverages TanStack for efficient caching, Mansory for a dynamic and visually appealing image layout, and the Unsplash API for high-quality images.
 
-Features
+#Features
 
-Responsive Design: Adapts seamlessly to different screen sizes.
-Efficient Caching: Uses TanStack for optimized data fetching and caching.
-Dynamic Layout: Implements Mansory for a fluid and dynamic image layout.
-High-Quality Images: Integrates with the Unsplash API to fetch stunning photos.
+-Responsive Design: Adapts seamlessly to different screen sizes.
+-Efficient Caching: Uses TanStack for optimized data fetching and caching.
+-Dynamic Layout: Implements Mansory for a fluid and dynamic image layout.
+-High-Quality Images: Integrates with the Unsplash API to fetch stunning photos.
 
 
-Screenshots
+#Screenshots
 
 ![Screenshot 1](./screenshot1.png)
 ![Screenshot 2](./screenshot2.png)
 ![Screenshot 3](./screenshot3.png)
 
 
-Installation
+#Installation
 
 Follow these steps to set up and run the Gallery App on your local machine.
 
@@ -30,7 +30,7 @@ bash
     git clone https://github.com/SandroK0/gallery-app.git
 
 
-Install dependencies:
+#Install dependencies:
 
 bash
 
@@ -38,20 +38,20 @@ bash
     
     npm install
 
-Start the development server:
+#Start the development server:
 
 bash
 
     npm start
 
-Technologies Used
+#Technologies Used
 
-React: JavaScript library for building user interfaces.
-TypeScript: Superset of JavaScript that adds static typing.
-TanStack: Modern data-fetching and caching library.
-Mansory: JavaScript library for creating dynamic, responsive layouts.
+-React: JavaScript library for building user interfaces.
+-TypeScript: Superset of JavaScript that adds static typing.
+-TanStack: Modern data-fetching and caching library.
+-Mansory: JavaScript library for creating dynamic, responsive layouts.
 
-Project Structure
+#Project Structure
 
 gallery-app/
 ├── public/
