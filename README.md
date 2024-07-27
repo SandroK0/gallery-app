@@ -27,7 +27,7 @@ Follow these steps to set up and run the Gallery App on your local machine.
 
 bash
 
-    git clone https://github.com/your-username/gallery-app.git
+    git clone https://github.com/SandroK0/gallery-app.git
 
 
 Install dependencies:
@@ -52,8 +52,6 @@ Technologies Used
     Mansory: JavaScript library for creating dynamic, responsive layouts.
 
 Project Structure
-
-java
 
 gallery-app/
 ├── public/
