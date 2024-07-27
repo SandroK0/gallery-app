@@ -3,6 +3,7 @@ Gallery App
 Overview
 
 Gallery App is a modern and responsive image gallery application built with React and TypeScript. This app leverages TanStack for efficient caching, Mansory for a dynamic and visually appealing image layout, and the Unsplash API for high-quality images.
+
 Features
 
     Responsive Design: Adapts seamlessly to different screen sizes.
