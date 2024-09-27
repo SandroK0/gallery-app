@@ -1,17 +1,14 @@
 import axios, { AxiosRequestConfig } from "axios";
-import { UnsplashPhoto } from "../Types";
-
-const accessKey = "Y4gTL_LNccpQkmeNI_BeRLKqg7w1q6ZfgDXOxLpqnbA";
-const URL = "https://api.unsplash.com";
-
-const requestConfig: AxiosRequestConfig = {
-  params: {
-    client_id: accessKey,
-    per_page: 30,
-  },
-};
 
 export default function useApi() {
+  const apiKey = process.env.REACT_APP_API_KEY;
+  const URL = "https://api.unsplash.com";
+  const requestConfig: AxiosRequestConfig = {
+    params: {
+      client_id: apiKey,
+      per_page: 30,
+    },
+  };
   const FetchPages = async ({
     queryKey,
     pageParam,
@@ -39,7 +36,7 @@ export default function useApi() {
   const getPhotoStats = async (id: string) => {
     const response = await axios.get(`${URL}/photos/${id}/statistics`, {
       params: {
-        client_id: accessKey,
+        client_id: apiKey,
       },
     });
     return response.data;
@@ -48,7 +45,7 @@ export default function useApi() {
   const trackPhotoDownload = async (id: string) => {
     const response = await axios.get(`${URL}/photos/${id}/download`, {
       params: {
-        client_id: accessKey,
+        client_id: apiKey,
       },
     });
     if (response.status === 200) {
@@ -61,6 +58,6 @@ export default function useApi() {
     FetchPages,
     getPhotoStats,
     trackPhotoDownload,
-    accessKey,
+    apiKey,
   };
 }
