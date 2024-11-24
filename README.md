@@ -1,5 +1,7 @@
 # Gallery App
 
+### You can view the live version of the app [here](https://gallery-app-react-app.onrender.com/).
+
 ## Overview
 
 Gallery App is a responsive image gallery application built with React and TypeScript. This app leverages TanStack for efficient caching, Mansory for a dynamic and visually appealing image layout, and the Unsplash API for high-quality images.
