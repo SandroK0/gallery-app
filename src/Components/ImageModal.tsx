@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./ImageModal.module.css";
 import { UnsplashPhoto, PhotoStatistics } from "../Types";
 import useApi from "../Hooks/useApi";
-import axios from "axios";
 
 export default function ImageModal(props: {
   img: UnsplashPhoto;
