@@ -1,6 +1,4 @@
-# Gallery App
-
-### You can view the live version of the app [here](https://gallery-app-react-app.onrender.com/).
+# Gallery App [(view)](https://gallery-app-react-app.onrender.com/)
 
 ## Overview
 
