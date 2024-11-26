@@ -1,4 +1,4 @@
-# Gallery App [(view)](https://gallery-app-react-app.onrender.com/)
+# Gallery App [(view)](http://34.159.43.94/)
 
 ## Overview
 
