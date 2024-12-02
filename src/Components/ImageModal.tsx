@@ -73,9 +73,9 @@ export default function ImageModal(props: {
           </thead>
           <tbody>
             <tr>
-              <td className={styles.stat}>{img.likes}</td>
-              <td className={styles.stat}>{imgStats?.downloads.total}</td>
-              <td className={styles.stat}>{imgStats?.views.total}</td>
+              <td className={styles.stat}>{img.likes ? img.likes : "---"}</td>
+              <td className={styles.stat}>{imgStats?.downloads.total ? imgStats?.downloads.total : "---"}</td>
+              <td className={styles.stat}>{imgStats?.views.total ? imgStats?.views.total : "---"}</td>
             </tr>
           </tbody>
         </table>
