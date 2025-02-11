@@ -1,4 +1,4 @@
-# Gallery App [(view)](http://34.159.113.203/)
+# Gallery App
 
 ## Overview
 
